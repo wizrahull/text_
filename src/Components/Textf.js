@@ -22,11 +22,11 @@ const change = (event)=>{
 
  }
 
- const finder = () => {
+//  const finder = () => {
 
    
 
-}
+// }
 
  const toLowerCase = () => {
 
@@ -49,14 +49,17 @@ const reset = ()=>{
 
 }
 
+
+fetch("https://data.nasa.gov/resource/vyzu-gm3d.json").then((response)=>response.json()).then((data)=> console.log(data))
+
     return (
       
       <>
 
      
-        <div class="mb-4 container   ">
-          <label for="exampleFormControlTextarea1" class="form-label my-5"><b>Enter Your Text</b></label>
-          <textarea onChange={change} value={text} style={{height: "300px"}}class="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div className="mb-4 container   ">
+          <label htmlFor="exampleFormControlTextarea1" className="form-label my-5"><b>Enter Your Text</b></label>
+          <textarea onChange={change} value={text} style={{height: "300px"}}classNames="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
 
         <button  onClick={toUpperCase} className="btn "> Upper Case</button>
         <button  onClick={toLowerCase} className="btn "> Lower Case</button>
